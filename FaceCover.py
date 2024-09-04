@@ -40,7 +40,8 @@ def overlay_emoji(img, emoji_directory):
 
     # Check if there are any emoji files
     if not emoji_files:
-        st.error("No emoji files found in the specified directory. Please check the directory path.")
+        #st.error("No emoji files found in the specified directory. Please check the directory path.")
+        st.error("Emoji not found!")
         return pil_img
 
     # Iterate over detected faces
@@ -90,7 +91,7 @@ if st.button("スタート"):
 
         # Set up the download link
         st.download_button(
-            label="Download Processed Images",
+            label="ダウンロード",
             data=zip_buffer.getvalue(),
             file_name="processed_images.zip",
             mime="application/zip"
